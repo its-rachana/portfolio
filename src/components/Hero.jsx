@@ -19,10 +19,6 @@ const Hero = () => {
                 <p className="hero-description">
                     {t('hero.description')}
                 </p>
-                <div className="hero-btns">
-                    <a href="#projects" className="btn-primary">{t('projects.viewProject')}</a>
-                    <a href="#contact" className="btn-outline">{t('contact.title')}</a>
-                </div>
             </div>
             <div className="hero-visual">
                 <div className="image-frame">
