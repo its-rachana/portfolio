@@ -54,9 +54,9 @@ const resources = {
                         period: 'Aug 2021 – Aug 2024',
                         duration: '3 Years',
                         highlights: [
-                            { icon: '🚀', text: 'Delivered end-to-end onboarding and support portal features using React.js, Angular, HTML5, CSS3, and JavaScript, backed by Node.js REST APIs. Implemented SSR/ISR, caching, and code-splitting, improving Core Web Vitals (LCP/TTFB) by 20%.' },
-                            { icon: '🗄️', text: 'Designed SQL-based data models and API contracts with pagination, validation, and rate-limiting to handle 100,000+ records/day. Wrote unit and end-to-end tests integrated into CI/CD pipelines, reducing production regressions by 40%.' },
-                            { icon: '🔍', text: 'Resolved production issues via root-cause analysis and post-mortems, documented runbooks, and collaborated with BA, QA, and product teams in Agile sprints, improving delivery efficiency by 15%.' }
+                            { icon: '🚀', text: 'Frontend & Backend: Delivered end-to-end onboarding and support portal features. Built the frontend using React.js, Angular, HTML5, CSS3, and JavaScript, and developed the backend using Node.js REST APIs. Implemented SSR/ISR, caching, and code-splitting, improving Core Web Vitals (LCP/TTFB) by 20%.' },
+                            { icon: '🗄️', text: 'Database & Deployment: Designed SQL database models and API contracts with pagination, validation, and rate-limiting to handle 100,000+ records/day. Managed deployment and wrote unit and end-to-end tests integrated into CI/CD pipelines, reducing production regressions by 40%.' },
+                            { icon: '🔍', text: 'Operations: Resolved production issues via root-cause analysis and post-mortems, documented runbooks, and collaborated with BA, QA, and product teams in Agile sprints, improving delivery efficiency by 15%.' }
                         ],
                         tags: ['React.js', 'Angular', 'Node.js', 'SQL', 'CI/CD', 'Agile']
                     }
