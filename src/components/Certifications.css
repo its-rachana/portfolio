@@ -1,0 +1,75 @@
+.certifications {
+    padding: 0;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cert-card {
+    display: flex;
+    gap: 25px;
+    padding: 35px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    align-items: flex-start;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cert-icon-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.cert-content {
+    flex-grow: 1;
+}
+
+.cert-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+}
+
+.cert-issuer {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-cyan);
+    margin-bottom: 15px;
+}
+
+.cert-desc {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .cert-card {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .cert-icon-wrap {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap');
+
+:root {
+  --bg-color: #0a0b0d;
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --accent-purple: #c5a059;
+  /* Sophisticated Champagne Gold */
+  --accent-cyan: #e2c275;
+  /* Radiant Gold */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --nav-bg: rgba(10, 11, 13, 0.85);
+
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: transparent;
+  /* Allow background elements to show through */
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, #1a1b1f 0%, #0a0b0d 100%);
+  background-color: #0a0b0d;
+  /* Base layer color */
+  z-index: -2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Outfit', sans-serif;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
+
+/* Language Transition Overlay */
+.lang-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.95) 0%, rgba(226, 194, 117, 0.95) 100%);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Animation state - overlay is animating (page reveal from corner) */
+.lang-transition-overlay.animating {
+  opacity: 1;
+  visibility: visible;
+  animation: cornerReveal 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Opaque state - overlay is fully visible */
+.lang-transition-overlay.opaque {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Page reveal animation - sweeps from top-left to bottom-right */
+@keyframes cornerReveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
