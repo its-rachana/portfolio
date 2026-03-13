@@ -12,7 +12,7 @@ const Contact = () => {
     const [status, setStatus] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xqeybdwq';
 
     const handleChange = (e) => {
         setFormData({
