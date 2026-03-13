@@ -19,6 +19,11 @@ const Hero = () => {
                 <p className="hero-description">
                     {t('hero.description')}
                 </p>
+                <div className="hero-btns">
+                    <a href="/Rachana_Angara_Resume.pdf" download className="btn-primary">
+                        {t('hero.downloadResume')}
+                    </a>
+                </div>
             </div>
             <div className="hero-visual">
                 <div className="image-frame">
